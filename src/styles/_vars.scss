@@ -1,0 +1,77 @@
+$distPath: '../dist';
+$srcPath: '../src';
+$resPath: '../res';
+// Example usage: background-image: url(#{$distPath}/img/logo.svg);
+
+// Colours
+$colorBrand: #00113d;
+$colorAccent: #e65778;
+
+$colorBlue: #59a9ff;
+$colorBlack: #151b26;
+$colorGreen: #8fd655;
+$colorRed: #ff596f;
+$colorYellow: #ffb566;
+
+$colorNeutral: #f8faff;
+$colorDark: $colorBlack;
+$colorSuccess: $colorGreen;
+$colorInfo: $colorBlue;
+$colorWarning: $colorYellow;
+$colorDanger: $colorRed;
+$colorBody: #273240;
+$colorHeading: $colorDark;
+$colorAccentLight: lighten($colorAccent, 10%); // #ed839c
+$colorAccentDark: darken($colorAccent, 10%); // #df2b54
+$colorNeutralDark: darken($colorNeutral, 10%);
+$colorNeutralLight: lighten($colorNeutral, 10%);
+$colorPrimary: $colorBrand;
+$colorPrimaryLight: lighten($colorBrand, 10%); // #001f70
+$colorPrimaryDark: darken($colorBrand, 10%); // #00030a
+
+// Typography
+$fontFamilySans: 'Poppins', Helvetica, Arial, sans-serif;
+$fontFamily: $fontFamilySans;
+$fontSize: 14;
+$lineHeight: 1;
+
+// Components & Spacing
+$borderRadius: 0.5rem;
+$gapXXS: 0.5rem;
+$gapXS: 1rem;
+$gapSM: 2rem;
+$gapMD: 3rem;
+$gapLG: 4rem;
+$gapXL: 5rem;
+$gapXXL: 10rem;
+$gap: $gapMD;
+
+// Grid & Breakpoints
+$xl: 1280px;
+$lg: 1024px;
+$md: 768px;
+$sm: 640px;
+$xs: 480px;
+$numCols: 12;
+$gutter: $gapSM;
+
+// Animations
+$animationSpeed: 250ms;
+$animation: ease-in-out;
+
+// Box Shadow
+$bsXS: 0 0px 0.7px rgba(0, 0, 0, 0.02), 0 0px 1.7px rgba(0, 0, 0, 0.028),
+  0 0px 3.1px rgba(0, 0, 0, 0.035), 0 0px 5.6px rgba(0, 0, 0, 0.042),
+  0 0px 10.4px rgba(0, 0, 0, 0.05), 0 0px 25px rgba(0, 0, 0, 0.07);
+$bsSM: 0 0.7px 1.4px rgba(0, 0, 0, 0.02), 0 1.7px 3.3px rgba(0, 0, 0, 0.028),
+  0 3.1px 6.3px rgba(0, 0, 0, 0.035), 0 5.6px 11.2px rgba(0, 0, 0, 0.042),
+  0 10.4px 20.9px rgba(0, 0, 0, 0.05), 0 25px 50px rgba(0, 0, 0, 0.07);
+$bsMD: 0 1.4px 2.1px rgba(0, 0, 0, 0.02), 0 3.3px 5px rgba(0, 0, 0, 0.028),
+  0 6.3px 9.4px rgba(0, 0, 0, 0.035), 0 11.2px 16.8px rgba(0, 0, 0, 0.042),
+  0 20.9px 31.3px rgba(0, 0, 0, 0.05), 0 50px 75px rgba(0, 0, 0, 0.07);
+$bsLG: 0 2.1px 2.8px rgba(0, 0, 0, 0.02), 0 5px 6.7px rgba(0, 0, 0, 0.028),
+  0 9.4px 12.5px rgba(0, 0, 0, 0.035), 0 16.8px 22.3px rgba(0, 0, 0, 0.042),
+  0 31.3px 41.8px rgba(0, 0, 0, 0.05), 0 75px 100px rgba(0, 0, 0, 0.07);
+$bsXL: 0 2.8px 3.5px rgba(0, 0, 0, 0.02), 0 6.7px 8.3px rgba(0, 0, 0, 0.028),
+  0 12.5px 15.7px rgba(0, 0, 0, 0.035), 0 22.3px 27.9px rgba(0, 0, 0, 0.042),
+  0 41.8px 52.2px rgba(0, 0, 0, 0.05), 0 100px 125px rgba(0, 0, 0, 0.07);
