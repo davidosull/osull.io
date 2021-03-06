@@ -1,0 +1,78 @@
+.darkMode {
+  $self: &;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  &__icons {
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      top: 0.6rem;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition-delay: 0.5s;
+      transition: all 0.25s ease;
+    }
+
+    &:before {
+      background-image: url(../#{$resPath}/img/sun-alt.svg);
+      left: 0.8rem;
+    }
+
+    &:after {
+      right: 0.8rem;
+      background-image: url(../#{$resPath}/img/moon.svg);
+    }
+  }
+
+  input[type='checkbox'] {
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked {
+      + label {
+        &:after {
+          transform: translateX(3.2rem);
+        }
+        #{$self}__icons {
+          &:after,
+          &:before {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: $gap;
+    right: $gap;
+    width: 6.4rem;
+    height: 3.2rem;
+    margin: 0px;
+    appearance: none;
+    background: var(--element1);
+    border-radius: 2rem;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 2.4rem;
+      width: 2.4rem;
+      top: 0.4rem;
+      left: 0.4rem;
+      border-radius: 50%;
+      background: var(--surface2);
+      transition: transform 0.5s ease;
+    }
+  }
+}

@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>David O'Sullivan - Front-end Web Developer</title>
+    <meta name="color-scheme" content="light dark" />
+    <title>David O. - Frontend Web Developer</title>
     <link rel="stylesheet" href="/dist/css/styles.min.css" />
   </head>
   <body>
+    <div class="darkMode">
+      <input type="checkbox" name="darkModeInput" id="darkModeInput" />
+      <label for="darkModeInput">
+        <span class="darkMode__icons"></span>
+      </label>
+    </div>
+
     <main>
       <div class="page">
         <div class="page__content">
@@ -15,6 +23,7 @@
           <div class="page__links">
             <a href="https://github.com/davidosull">GitHub</a>
             <a href="https://instagram.com/osull.io">Instagram</a>
+
             <a href="https://twitter.com/_osull">Twitter</a>
           </div>
           <p>Hello. My name is David and I build websites.</p>

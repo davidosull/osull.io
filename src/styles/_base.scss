@@ -1,20 +1,50 @@
+:root[color-mode='light'] .light--hidden {
+  display: none;
+}
+
+:root[color-mode='dark'] .dark--hidden {
+  display: none;
+}
+
 body {
-  color: $colorBody;
+  color: var(--element1);
+  background: var(--surface2);
   font-family: $fontFamily;
   line-height: $lineHeight;
   text-size-adjust: none;
   @include fontSize($fontSize);
-  display: flex;
+}
+
+main {
+  background: var(--surface2);
+  padding: $gap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--element2);
+  margin-bottom: $gap;
+  line-height: 1;
+}
+
+p {
+  &:not(:last-of-type) {
+    margin-bottom: $gapSM;
+  }
 }
 
 a {
-  color: #bd93f9;
+  color: var(--primary2);
   font-weight: 600;
   text-decoration: none;
   @include transition;
 
   &:hover {
-    color: darken(#bd93f9, 10%);
+    color: var(--primary1);
   }
 }
 
@@ -28,7 +58,6 @@ a[href^='tel'] {
 
 hr {
   height: 1px;
-  background-color: $colorDark;
 }
 
 img,

@@ -4,30 +4,69 @@ $resPath: '../res';
 // Example usage: background-image: url(#{$distPath}/img/logo.svg);
 
 // Colours
-$colorBrand: #00113d;
-$colorAccent: #e65778;
+$blue1: #828fb7;
+$blue2: #6272a4;
+$blue3: #4d5b86;
+$cyan1: #bdf3fe;
+$cyan2: #8be9fd;
+$cyan3: #59dffc;
+$dGray1: #3e4153;
+$dGray2: #282a36;
+$dGray3: #121319;
+$gray1: #5a5e77;
+$gray2: #44475a;
+$gray3: #2e303d;
+$green1: #82fba0;
+$green2: #50fa7b;
+$green3: #1ef956;
+$orange1: #ffd19f;
+$orange2: #ffb86c;
+$orange3: #ff9f39;
+$pink1: #ffacdc;
+$pink2: #ff79c6;
+$pink3: #ff46b0;
+$purple1: #dbc3fc;
+$purple2: #bd93f9;
+$purple3: #9f63f6;
+$red1: #ff8888;
+$red2: #ff5555;
+$red3: #ff2222;
+$white1: #fff;
+$white2: #f2f2f2;
+$white3: #e6e6e6;
+$yellow1: #f7fcbd;
+$yellow2: #f1fa8c;
+$yellow3: #ebf85b;
 
-$colorBlue: #59a9ff;
-$colorBlack: #151b26;
-$colorGreen: #8fd655;
-$colorRed: #ff596f;
-$colorYellow: #ffb566;
+:root[color-mode='light'] {
+  --surface1: #fff;
+  --surface2: #f2f2f2;
+  --surface3: #e6e6e6;
+  --element1: #3e4153;
+  --element2: #282a36;
+  --element3: #121319;
+  --primary1: #828fb7;
+  --primary2: #6272a4;
+  --primary3: #4d5b86;
+  --secondary1: #dbc3fc;
+  --secondary2: #bd93f9;
+  --secondary3: #9f63f6;
+}
 
-$colorNeutral: #f8faff;
-$colorDark: $colorBlack;
-$colorSuccess: $colorGreen;
-$colorInfo: $colorBlue;
-$colorWarning: $colorYellow;
-$colorDanger: $colorRed;
-$colorBody: #273240;
-$colorHeading: $colorDark;
-$colorAccentLight: lighten($colorAccent, 10%); // #ed839c
-$colorAccentDark: darken($colorAccent, 10%); // #df2b54
-$colorNeutralDark: darken($colorNeutral, 10%);
-$colorNeutralLight: lighten($colorNeutral, 10%);
-$colorPrimary: $colorBrand;
-$colorPrimaryLight: lighten($colorBrand, 10%); // #001f70
-$colorPrimaryDark: darken($colorBrand, 10%); // #00030a
+:root[color-mode='dark'] {
+  --surface1: #3e4153;
+  --surface2: #282a36;
+  --surface3: #121319;
+  --element1: #fff;
+  --element2: #f2f2f2;
+  --element3: #e6e6e6;
+  --secondary1: #82fba0;
+  --secondary2: #50fa7b;
+  --secondary3: #1ef956;
+  --primary1: #dbc3fc;
+  --primary2: #bd93f9;
+  --primary3: #9f63f6;
+}
 
 // Typography
 $fontFamilySans: 'Poppins', Helvetica, Arial, sans-serif;

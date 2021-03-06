@@ -1,7 +1,9 @@
 @import 'vars';
 @import 'mixins';
-
+@import 'root';
 @import 'reset';
+
 @import 'base';
 @import 'typography';
 @import 'page';
+@import 'darkMode';

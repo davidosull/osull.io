@@ -1,60 +1,9 @@
-main {
-  height: 100%;
-  width: 100%;
-}
-
 .page {
-  background: #282a36;
-  color: #f8f8f2;
-  width: 100%;
-
-  h1 {
-    margin-bottom: $gap;
-  }
-
-  p {
-    line-height: 1.5;
-    &:not(:last-of-type) {
-      margin-bottom: $gapSM;
-    }
-  }
-
-  &__name {
-    position: relative;
-    // padding-left: $gapXXL;
-
-    &:before {
-      // content: '';
-      // height: 8rem;
-      // width: 8rem;
-      // background: red;
-      // position: absolute;
-      // left: 0;
-      // top: 50%;
-      // transform: translateY(-50%);
-      // background-image: url('../#{$resPath}/img/memoji.png');
-      // background-size: cover;
-      // background-position: center;
-      // border-radius: 50%;
-    }
-  }
-
-  &__content {
-    position: fixed;
-    bottom: $gapLG;
-    left: $gapLG;
-    right: $gapLG;
-
-    @include rMin($md) {
-      max-width: 50%;
-      bottom: $gapXXL;
-      left: $gapXXL;
-      right: auto;
-    }
-  }
+  display: flex;
+  align-items: flex-end;
 
   &__links {
-    margin-bottom: $gap;
+    margin-bottom: $gapSM;
     display: flex;
     flex-flow: row wrap;
 
@@ -63,7 +12,6 @@ main {
       position: relative;
 
       &:hover {
-        color: darken(#bd93f9, 10%);
         transform: translateX(0.25rem);
       }
 
