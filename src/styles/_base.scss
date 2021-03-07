@@ -10,6 +10,8 @@ body {
 main {
   background: var(--surface2);
   padding: $gap;
+  display: flex;
+  align-items: flex-end;
   transition: all 0.75s ease;
 }
 

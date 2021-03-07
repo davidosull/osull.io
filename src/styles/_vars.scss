@@ -48,9 +48,6 @@ $yellow3: #ebf85b;
   --primary1: #828fb7;
   --primary2: #6272a4;
   --primary3: #4d5b86;
-  --secondary1: #dbc3fc;
-  --secondary2: #bd93f9;
-  --secondary3: #9f63f6;
 }
 
 :root[color-mode='dark'] {
@@ -63,9 +60,6 @@ $yellow3: #ebf85b;
   --primary1: #dbc3fc;
   --primary2: #bd93f9;
   --primary3: #9f63f6;
-  --secondary1: #82fba0;
-  --secondary2: #50fa7b;
-  --secondary3: #1ef956;
 }
 
 // Typography
@@ -91,12 +85,10 @@ $lg: 1024px;
 $md: 768px;
 $sm: 640px;
 $xs: 480px;
-$numCols: 12;
-$gutter: $gapSM;
 
 // Animations
 $animationSpeed: 250ms;
-$animation: ease-in-out;
+$animation: ease;
 
 // Box Shadow
 $bsXS: 0 0px 0.7px rgba(0, 0, 0, 0.02), 0 0px 1.7px rgba(0, 0, 0, 0.028),

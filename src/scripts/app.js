@@ -1,10 +1,10 @@
 // Get window.innerHeight
 function windowHeight() {
   const windowInnerHeight = window.innerHeight;
-  const pageElement = document.querySelector('.page');
+  // const pageElement = document.querySelector('.page');
   const mainElement = document.querySelector('main');
   const mainStyle = mainElement.currentStyle || window.getComputedStyle(mainElement);
-  pageElement.style.height = `calc(${windowInnerHeight}px - (${mainStyle.paddingTop} + ${mainStyle.paddingBottom}}))`;
+  mainElement.style.height = `${windowInnerHeight}px`;
 }
 
 window.addEventListener('load', windowHeight);
