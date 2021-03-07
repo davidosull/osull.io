@@ -1,11 +1,3 @@
-:root[color-mode='light'] .light--hidden {
-  display: none;
-}
-
-:root[color-mode='dark'] .dark--hidden {
-  display: none;
-}
-
 body {
   color: var(--element1);
   background: var(--surface2);
@@ -18,6 +10,7 @@ body {
 main {
   background: var(--surface2);
   padding: $gap;
+  transition: all 0.75s ease;
 }
 
 h1,
@@ -27,11 +20,13 @@ h4,
 h5,
 h6 {
   color: var(--element2);
-  margin-bottom: $gap;
+  margin-bottom: $gapSM;
   line-height: 1;
+  transition: all 0.75s ease;
 }
 
 p {
+  transition: all 0.125s ease;
   &:not(:last-of-type) {
     margin-bottom: $gapSM;
   }
@@ -41,7 +36,7 @@ a {
   color: var(--primary2);
   font-weight: 600;
   text-decoration: none;
-  @include transition;
+  transition: all 0.75s ease;
 
   &:hover {
     color: var(--primary1);

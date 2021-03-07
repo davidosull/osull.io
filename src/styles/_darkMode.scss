@@ -4,35 +4,27 @@
   top: 0;
   right: 0;
 
-  &__icons {
-    &:after,
-    &:before {
-      content: '';
-      position: absolute;
-      width: 2rem;
+  &__input {
+  }
+
+  &__icon {
+    > svg {
       height: 2rem;
-      top: 0.6rem;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      transition-delay: 0.5s;
-      transition: all 0.25s ease;
+      width: 2rem;
+      > path {
+        fill: var(--primary2);
+      }
     }
-
-    &:before {
-      background-image: url(../#{$resPath}/img/sun-alt.svg);
-      left: 0.8rem;
+    &--moon {
     }
-
-    &:after {
-      right: 0.8rem;
-      background-image: url(../#{$resPath}/img/moon.svg);
+    &--sun {
     }
   }
 
   input[type='checkbox'] {
     opacity: 0;
     visibility: hidden;
+    position: relative;
 
     &:checked {
       + label {
@@ -62,6 +54,11 @@
     outline: none;
     cursor: pointer;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75rem;
+    align-items: center;
 
     &:after {
       content: '';

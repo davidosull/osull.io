@@ -11,38 +11,35 @@ window.addEventListener('load', windowHeight);
 window.addEventListener('resize', windowHeight);
 
 // Dark Mode
-const darkModeInput = document.querySelector('.darkModeToggle');
-console.log(darkModeInput);
+const darkModeCheckbox = document.querySelector('.darkMode__input');
 
 function darkModeToggle() {
-  if (darkModeInput.checked === 'true') {
-    console.log('Checked');
+  if (darkModeCheckbox.checked === false) {
+    // Dark Mode
+    localStorage.setItem('color-mode', 'dark');
+    localStorage.setItem('checkbox', false);
+    document.documentElement.setAttribute('color-mode', 'dark');
   } else {
-    console.log('Not Checked');
+    // Light Mode
+    localStorage.setItem('color-mode', 'light');
+    localStorage.setItem('checkbox', true);
+    document.documentElement.setAttribute('color-mode', 'light');
   }
 }
 
-darkModeToggle();
+darkModeCheckbox.addEventListener('click', darkModeToggle);
 
-// const toggleColorMode = (el) => {
-//   if (el.currentTarget.classList.contains('light--hidden')) {
-//     document.documentElement.setAttribute('color-mode', 'light');
-//     localStorage.setItem('color-mode', 'light');
-//     return;
-//   }
-//   document.documentElement.setAttribute('color-mode', 'dark');
-//   localStorage.setItem('color-mode', 'dark');
-// };
+window.onload = function () {
+  const theme = localStorage.getItem('color-mode');
 
-// const toggleColorButtons = document.querySelectorAll('.color-mode__btn');
-
-// toggleColorButtons.forEach((btn) => {
-//   btn.addEventListener('click', toggleColorMode);
-// });
-
-// if (
-//   localStorage.getItem('color-mode') === 'dark' ||
-//   (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('color-mode'))
-// ) {
-//   document.documentElement.setAttribute('color-mode', 'dark');
-// }
+  if ((localStorage.length === 0 && window.matchMedia('(prefers-color-scheme: dark)').matches) || theme === 'dark') {
+    document.documentElement.setAttribute('color-mode', 'dark');
+    document.querySelector('.darkMode__input').checked = false;
+  } else if (
+    (localStorage.length === 0 && window.matchMedia('(prefers-color-scheme: light)').matches) ||
+    theme === 'light'
+  ) {
+    document.documentElement.setAttribute('color-mode', 'light');
+    document.querySelector('.darkMode__input').checked = true;
+  }
+};
