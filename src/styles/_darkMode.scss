@@ -4,9 +4,6 @@
   top: 0;
   right: 0;
 
-  &__input {
-  }
-
   &__icon {
     > svg {
       height: 2rem;
@@ -14,10 +11,6 @@
       > path {
         fill: var(--primary2);
       }
-    }
-    &--moon {
-    }
-    &--sun {
     }
   }
 
@@ -29,13 +22,7 @@
     &:checked {
       + label {
         &:after {
-          transform: translateX(3.2rem);
-        }
-        #{$self}__icons {
-          &:after,
-          &:before {
-            opacity: 0.5;
-          }
+          transform: translateX(3.1rem);
         }
       }
     }
